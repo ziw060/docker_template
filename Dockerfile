@@ -19,7 +19,8 @@ USER root
 RUN apt-get -y install htop
 
 # 3) install packages
-RUN pip install --no-cache-dir networkx scipy python-louvain
+RUN conda install --yes <package1> <package2>
+RUN pip install --no-cache-dir <package>
 
 # 4) change back to notebook user
 COPY /run_jupyter.sh /
